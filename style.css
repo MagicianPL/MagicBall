@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -17,31 +21,32 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    width: 1000px;
-    height: 600px;
+	width: 100rem;
+    max-width: 100rem;
+    min-height: 60rem;
 }
 
 .info {
-    margin-top: 20px;
+    margin-top: 2rem;
     text-align: center;
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .info h1 {
     margin-bottom: 10px;
-    font-size: 60px;
+    font-size: 6rem;
 }
 
 .ball-img {
     position: relative;
-    height: 250px;
+    height: 25rem;
 }
 
 .ball-img img {
     position: absolute;
-    top: 30px;
-    left: 300px;
-    width: 300px;
+    top: 3rem;
+    left: 30rem;
+    max-width: 30rem;
     cursor: pointer;
 }
 
@@ -50,25 +55,25 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .question-area h2 {
     margin-bottom: 10px;
-    font-size: 36px;
+    font-size: 3.6rem;
     text-transform: uppercase;
 }
 
 .question-area input {
     padding: 10px 20px;
     width: 80%;
-    font-size: 20px;
+    font-size: 2rem;
     border: 2px solid #333;
     border-radius: 8px;
 }
 
 .question-area .answer {
-    margin-top: 30px;
+    margin-top: 3rem;
 }
 
 .question-area .answer span {
@@ -111,6 +116,114 @@ body {
 }
 
 .info p:last-child {
-    font-size: 21px;
-    margin-top: 20px;
+    font-size: 2.1rem;
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 1000px) {
+	html {
+		font-size: 55%;
+	}
+	
+	body {
+		justify-content: flex-start;
+	}
+	
+	.info h1 {
+		margin-bottom: 3rem;
+	}
+	
+	.wrapper {
+		width: 100%;
+		padding: 3rem 1.5rem;
+	}
+	
+	.ball-img {
+		overflow: hidden;
+	}
+	
+	.ball-img img {
+		left: 35%;
+		transform: translateX(-28%);
+	}
+	
+	@keyframes shake {
+    0% {
+        left: 32%;
+    }
+
+    20% {
+        left: 38%;
+    }
+
+    40% {
+        left: 32%;
+    }
+
+    60% {
+        left: 38%;
+    }
+
+    80% {
+        left: 32%;
+    }
+
+    100% {
+        left: 35%;
+    }
+}
+}
+
+@media (max-width: 700px) {
+	.ball-img img {
+		left: 35%;
+		transform: translateX(-33%);
+	}
+}
+
+@media (max-width: 600px) {
+	.ball-img img {
+		left: 35%;
+		transform: translateX(-40%);
+	}
+}
+
+@media (max-width: 500px) {
+	html {
+		font-size: 50%;
+	}
+}
+
+@media (max-width: 350px) {
+	.ball-img img {
+		left: 35%;
+		transform: translateX(-50%);
+	}
+	
+	@keyframes shake {
+    0% {
+        left: 32%;
+    }
+
+    20% {
+        left: 38%;
+    }
+
+    40% {
+        left: 32%;
+    }
+
+    60% {
+        left: 38%;
+    }
+
+    80% {
+        left: 32%;
+    }
+
+    100% {
+        left: 35%;
+    }
+}
 }
